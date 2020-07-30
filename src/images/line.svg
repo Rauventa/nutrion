@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="974px" height="38px" viewBox="0 0 974 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path 2</title>
+    <defs>
+        <linearGradient x1="0.371565325%" y1="62.5689338%" x2="100.377947%" y2="62.5689338%" id="linearGradient-1">
+            <stop stop-color="#FF0B6A" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FF0B6A" offset="13.4712838%"></stop>
+            <stop stop-color="#01E2EF" offset="30.1942568%"></stop>
+            <stop stop-color="#01E2EF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-4.000000, -418.000000)" stroke="url(#linearGradient-1)">
+            <polyline id="Path-2" points="0 441.244449 157.705173 441.244449 168.581471 433.327891 181.808715 448.646641 189.17131 420 198.667555 454 208.609949 433.327891 215.674341 441.244449 978 441.244449"></polyline>
+        </g>
+    </g>
+</svg>
