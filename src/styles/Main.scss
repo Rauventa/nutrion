@@ -13,6 +13,22 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  border: 1px #fff solid !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  margin-left: .5em !important;
+  vertical-align: middle !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #01E2EF !important;
+  border-color: transparent !important;
+}
+
 body.--fullscreen {
   max-height: 100%;
   height: 100vh;
@@ -203,7 +219,7 @@ input[type="checkbox"] {
   border-radius: 2px;
 }
 
-input[type="text"], .button {
+input[type="text"], input[type="tel"], input[type="number"], input[type="email"], .button {
   color: #fff;
   display: inline-block;
   font-size: 14px;
@@ -253,7 +269,7 @@ input[type="text"], .button {
   }
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"]  {
   background: rgba(0, 0, 0, 0.42);
   border: 1px solid rgba(96, 148, 151, 0.35);
   border-radius: 2px;
@@ -486,6 +502,7 @@ $verticallablewidth: 70px;
     align-self: center;
     text-align: right;
     user-select: none;
+    margin-left: 5rem;
 
     .bullet {
       width: 8px;
@@ -504,13 +521,13 @@ $verticallablewidth: 70px;
       text-transform: uppercase;
       font-weight: 200;
 
-      small {
-        display: none;
-      }
-
-      &.--active {
-        small {
-          display: inline-block;
+      .swiper-pagination-bullet-active {
+        position: relative;
+        &::before {
+          content: 'protein';
+          position: absolute;
+          top: -3px;
+          left: -60px;
         }
 
         .bullet {

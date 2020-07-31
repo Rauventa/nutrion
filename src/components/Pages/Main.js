@@ -12,8 +12,15 @@ import insta4 from '../../images/insta4.png'
 import insta5 from '../../images/insta5.png'
 import Footer from "../Root/Footer";
 import Header from "../Root/Header";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 const Main = () => {
+    SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
     return (
         <div className={'Main'}>
             <header>
@@ -35,34 +42,49 @@ const Main = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="item foto"><img src={box}  alt={'img'}/>
+                        <div className="item foto">
+                            <Swiper
+                                navigation={{
+                                    prevEl: '.prev',
+                                    nextEl: '.next'
+                                }}
+                                pagination={{
+                                    el: '.pagination',
+                                    renderBullet: function (index, className) {
+                                        return (
+                                            // eslint-disable-next-line no-useless-concat
+                                            '<div class="' + 'control ' + '">' +
+                                            // eslint-disable-next-line no-useless-concat
+                                            '<span class="'+ className + ' bullet' +'"></span>' +
+                                            '</div>'
+                                        )
+                                    }
+                                }}
+                            >
+                                <SwiperSlide>
+                                    <img src={box}  alt={'img'}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={box}  alt={'img'}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={box}  alt={'img'}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={box}  alt={'img'}/>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={box}  alt={'img'}/>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
                         <div className="item slidercontrols">
-                            <div className="control">
-                                <small>slider text</small>
-                                <span className="bullet"/>
-                            </div>
-                            <div className="control --active">
-                                <small>neutral taste</small>
-                                <span className="bullet"/>
-                            </div>
-                            <div className="control">
-                                <small>slider text</small>
-                                <span className="bullet"/>
-                            </div>
-                            <div className="control">
-                                <small>slider text</small>
-                                <span className="bullet"/>
-                            </div>
-                            <div className="control">
-                                <small>slider text</small>
-                                <span className="bullet"/>
-                            </div>
+                            <div className={'pagination'}></div>
                             <div className="sliderarrows">
-                                <svg className="--back icon" width="1px" height="1px">
+                                <svg className="--back icon prev" width="1px" height="1px">
                                     <use href="#sliderarrow"/>
                                 </svg>
-                                <svg className="icon" width="1px" height="1px">
+                                <svg className="icon next" width="1px" height="1px">
                                     <use href="#sliderarrow"/>
                                 </svg>
                             </div>

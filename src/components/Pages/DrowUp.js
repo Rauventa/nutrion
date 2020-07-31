@@ -23,7 +23,7 @@ const DrowUp = props => {
                                     <h2>Contact information</h2>
                                     <div className="row">
                                         <div className="inputbox">
-                                            <input type="text" />
+                                            <input type="email" />
                                             <label>Email</label>
                                         </div>
                                         <p>
@@ -60,14 +60,14 @@ const DrowUp = props => {
                                             <label>Country/Region</label>
                                         </div>
                                         <div className="item inputbox wide">
-                                            <input type="text" />
+                                            <input type="number" />
                                             <label>Postcode</label>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="inputbox">
-                                            <input type="text" />
-                                            <label>Phone</label>
+                                            <input type="tel" pattern="+[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" />
+                                            <label>Phone +1-999-888-33-22</label>
                                         </div>
                                     </div>
                                     <div className="row flex">
